@@ -27,8 +27,8 @@
 </head>
 
 <body>
-  <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-    <div class="container"> <a class="navbar-brand" href="index.php">
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-light">
+    <div class="container"> <a class="navbar-brand" href="index.php" style="color: black">
         <b> SUPERNOVA</b></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar11" aria-cont>
         <span class="navbar-toggler-icon"></span>
@@ -36,73 +36,73 @@
 
       <div class="collapse navbar-collapse" id="navbar11">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item"> <a class="nav-link" href="index.php#home">Home</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="index.php#studio">Galeri</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="index.php#tarif">Tarif</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="index.php#testimoni">Testimoni</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="index.php#kontak">Kontak</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="index.php#home" style="color: black"><b>Home</b></a> </li>
+          <li class="nav-item"> <a class="nav-link" href="index.php#studio" style="color: black"><b>Galeri</b></a> </li>
+          <li class="nav-item"> <a class="nav-link" href="index.php#tarif" style="color: black"><b>Tarif</b></a> </li>
+          <li class="nav-item"> <a class="nav-link" href="index.php#testimoni" style="color: black"><b>Testimoni</b></a> </li>
+          <li class="nav-item"> <a class="nav-link" href="index.php#kontak" style="color: black"><b>Kontak</b></a> </li>
         </ul>
-        <a class="btn btn-primary navbar-btn ml-md-2" href="login.php">Masuk</a>
+        <a class="btn btn-primary navbar-btn ml-md-2" href="login.php" style="background-color: #b30000">Masuk</a>
       </div>
     </div>
   </nav>
 
 
-  <div class="py-5 text-center" style="background-image: url(&quot;https://static.pingendo.com/cover-bubble-dark.svg&quot;); background-size: cover;" id="home">
+  <div class="py-5 text-center" style="background-image: url('gambar/g4.jpeg'); background-size: cover;" id="home">
     <div class="container" >
       <div class="row">
         <div class="bg-transparent p-5 mx-auto col-md-10 col-10" style="">
           <h3 class="display-3" style="color:white">Studio Supernova</h3>
-          <p class="mb-3 lead">Supernova Studio Musik</p>
-          <p class="mb-4">Studio Supernova sudah berdiri sejak tahun 2009. Kami adalah studio musik yang menyediakan jasa penyewaan alat alat musik. Tempat kami juga cukup nyaman untuk anda bermain musik. Harga yang kami tawarkan cukup bersaing. Alat musik yang kami sewakan memilili kualitas yang cukup baik. Akses menuju tempat kami juga cukup mudah. Kami siap melayani dengan baik dan ramah.</p>
-          <a class="btn btn-primary navbar-btn ml-md-2" href="#">Booking Now</a>
+          <p class="mb-3 lead" style="color: white">Supernova Studio Musik</p>
+          <p class="mb-4" style="color: white">Studio Supernova sudah berdiri sejak tahun 2009. Kami adalah studio musik yang menyediakan jasa penyewaan alat alat musik. Tempat kami juga cukup nyaman untuk anda bermain musik. Harga yang kami tawarkan cukup bersaing. Alat musik yang kami sewakan memilili kualitas yang cukup baik. Akses menuju tempat kami juga cukup mudah. Kami siap melayani dengan baik dan ramah.</p>
+          <a class="btn btn-primary navbar-btn ml-md-2" href="#" style="background-color: #b30000">Booking Now</a>
         </div>
       </div>
     </div>
   </div>
-  <div class="pt-5 pb-3 text-center" id="studio">
+  <div class="pt-5 pb-3 text-center" id="studio" style=" background-color: #602020">
     <div class="container">
-    <div class="card">
+    <div class="card" style="background-color:#b3b3b3">
       <div class="row">
         <div class="col-md-12">
           <h1 class="mb-3">Galeri Studio Supernova</h1>
           <p class="lead"> <b>
-              <a href="#">Lihat Semua Gambar...</a></b> <br> </p>
+              <a href="#" style="color: black">Lihat Semua Gambar...</a></b> <br> </p>
         </div>
       </div>
       <div class="row">
-        <div class="col-md-3 col-6 p-4"> <img class="img-fluid d-block" src="https://lh5.googleusercontent.com/p/AF1QipMotx27ZNiU5OzZ3udvv3yR29_9soCTKY5WWZ0u=w660-h715-p-k-no" width="1500">
+        <div class="col-md-3 col-6 p-4"> <img class="img-fluid d-block" src="gambar/g1.jpeg" width="1500">
           <h4 class="mt-3 mb-0"> <b>One&nbsp;</b> </h4>
         </div>
-        <div class="col-md-3 col-6 p-4"> <img class="img-fluid d-block" src="https://static.pingendo.com/img-placeholder-3.svg" width="1500">
+        <div class="col-md-3 col-6 p-4"> <img class="img-fluid d-block" src="gambar/g2.jpeg" width="1500">
           <h4 class="mt-3 mb-0"> <b>Two</b> </h4>
         </div>
-        <div class="col-md-3 col-6 p-4"> <img class="img-fluid d-block" src="https://lh3.googleusercontent.com/PzLAmiWwf3ArtJ5Wct8pqouogyh2ZZh2f7TWGD0sk28xIouAsjoyVebkRwP2OB0DhvYhzlhAmzjaT0-b=w960-h960-n-o-v1" width="1500">
+        <div class="col-md-3 col-6 p-4"> <img class="img-fluid d-block" src="gambar/g3.jpeg" width="1500">
           <h4 class="mt-3 mb-0"> <b>Three</b> </h4>
         </div>
-        <div class="col-md-3 col-6 p-4"> <img class="img-fluid d-block" src="https://static.pingendo.com/img-placeholder-3.svg" width="1500">
+        <div class="col-md-3 col-6 p-4"> <img class="img-fluid d-block" src="gambar/g4.jpeg" width="1500">
           <h4 class="mt-3 mb-0"> <b>Four</b> </h4>
         </div>
         <div class="row">
-        <div class="col-md-3 col-6 p-4"> <img class="img-fluid d-block" src="https://lh5.googleusercontent.com/p/AF1QipMotx27ZNiU5OzZ3udvv3yR29_9soCTKY5WWZ0u=w660-h715-p-k-no" width="1500">
+        <div class="col-md-3 col-6 p-4"> <img class="img-fluid d-block" src="gambar/g5.jpeg" width="1500">
           <h4 class="mt-3 mb-0"> <b>One&nbsp;</b> </h4>
         </div>
-        <div class="col-md-3 col-6 p-4"> <img class="img-fluid d-block" src="https://static.pingendo.com/img-placeholder-3.svg" width="1500">
+        <div class="col-md-3 col-6 p-4"> <img class="img-fluid d-block" src="gambar/g6.jpeg" width="1500">
           <h4 class="mt-3 mb-0"> <b>Two</b> </h4>
         </div>
-        <div class="col-md-3 col-6 p-4"> <img class="img-fluid d-block" src="https://lh3.googleusercontent.com/PzLAmiWwf3ArtJ5Wct8pqouogyh2ZZh2f7TWGD0sk28xIouAsjoyVebkRwP2OB0DhvYhzlhAmzjaT0-b=w960-h960-n-o-v1" width="1500">
+        <div class="col-md-3 col-6 p-4"> <img class="img-fluid d-block" src="gambar/g7.jpeg" width="1500">
           <h4 class="mt-3 mb-0"> <b>Three</b> </h4>
         </div>
-        <div class="col-md-3 col-6 p-4"> <img class="img-fluid d-block" src="https://static.pingendo.com/img-placeholder-3.svg" width="1500">
+        <div class="col-md-3 col-6 p-4"> <img class="img-fluid d-block" src="gambar/g4.jpeg" width="1500">
           <h4 class="mt-3 mb-0"> <b>Four</b> </h4>
         </div>
       </div>
     </div>
     </div>
   </div>
-  <div class="py-5" id="tarif" style="background-color:#42C5BE">
-    <div class="container" >
-    <div class="card bg-transparent">
+  <div class="py-5" id="tarif">
+    <div class="container">
+    <div class="card" style="background-color:#b3b3b3 ">
       <div class="row">
         <div class="text-center mx-auto col-md-12">
           <br>
@@ -116,7 +116,7 @@
           <p class="pb-3 border-bottom">Layanan Jasa Penyewaan Alat Musik ditempat, Sistem Penyewaannya menggunakan harga perjam, cocok digunakan untuk pengguna yang ingin latihan band.</p>
           <ul class="text-lg-right list-unstyled">
             <!--<li class="mb-1">One</li>-->
-          </ul> <a class="btn btn-primary mt-auto btn-block" href="#">Start now</a>
+          </ul> <a class="btn btn-primary mt-auto btn-block" href="#" style="background-color: #c65353">Start now</a>
         </div>
         <div class="col-lg-5 px-4  py-5 bg-white d-flex flex-column mb-3">
           <h3 class="pb-3 border-bottom">Rental Alat Band</h3>
@@ -124,15 +124,15 @@
           <p class="pb-3 border-bottom">Layanan Jasa Penyewaan Alat Band untuk dibawa keluar Rungan, seperti pengguna yang ingin melakukan pentas Band disekolah atau acara khusus.</p>
           <ul class="text-lg-right list-unstyled">
             <!--<li class="mb-1">One</li>-->
-          </ul> <a class="btn btn-primary mt-auto btn-block" href="#">Start now</a>
+          </ul> <a class="btn btn-primary mt-auto btn-block" href="#" style="background-color: #c65353">Start now</a>
         </div>
       </div>
       </div>
     </div>
   </div>
-  <div class="py-5 bg-dark" style="" id="testimoni">
+  <div class="py-5" id="testimoni">
     <div class="container">
-      <div class="card bg-transparent">
+      <div class="card" style="background-color: #b3b3b3">
       <div class="row">
         <div class="text-center mx-auto col-md-12">
           <h1 class="text-black mb-4" style="color:white">Testimoni Pengguna</h1>
@@ -203,7 +203,7 @@
           <form>
             <div class="form-group"> <input type="text" class="form-control" id="form44" placeholder="Name" required="required"> </div>
             <div class="form-group"> <input type="text" class="form-control" id="form45" placeholder="No Handphone" required="required"> </div>
-            <div class="form-group"> <textarea class="form-control" id="form46" rows="3" placeholder="Isi Pesan"></textarea> </div> <button type="submit" class="btn btn-primary">Kirim</button>
+            <div class="form-group"> <textarea class="form-control" id="form46" rows="3" placeholder="Isi Pesan"></textarea> </div> <button type="submit" class="btn btn-primary" style="background-color: #b30000">Kirim</button>
           </form>
         </div>
       </div>
