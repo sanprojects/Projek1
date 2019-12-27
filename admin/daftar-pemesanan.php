@@ -9,43 +9,11 @@
 </head>
 
 <body>
-  <!-- Navigasi Bar Mulai-->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container"> <a class="navbar-brand" href="index.php">
-        <b> SUPERNOVA</b>
-      </a>
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item"> <a class="navbar-collapse" style="color: white">Admin Panel</a> </li>
-        </ul>
-       <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar11">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbar11">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item"></li>
-        </ul>
-        <a class="btn btn-primary" href="index.php">Keluar</a>
-      </div>
-    </div>
-  </nav>
-  <!-- Navigasi Bar End-->
-
-  <!-- Navbar Menu Mulai -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="nav nav-tabs">
-              <div class="col-4 col-md"><p align="center"><a href="pesanan-baru.php" class="nav-link"  ><i class="fa fa-plus-square"></i><span><br>Pesanan<br>Baru</span></a></p></div>
-              <div class="col-4 col-md"><p align="center"><a href="data-pelanggan.php" class="nav-link" ><i class="fa fa-user-circle"></i><span><br>Data Pelanggan</span></a></p></div>
-              <div class="col-4 col-md"><p align="center"><a href="daftar-pemesanan.php" class="active nav-link" ><i class="fa fa-book"></i><span><br>Daftar Pemesanan</span></a></p></div>
-              <div class="col-4 col-md"><p align="center"><a href="data-administrator.php" class="nav-link" ><i class="fa fa-user-circle"></i><span><br>Data<br>Admin</span></a></p></div>
-              <div class="col-4 col-md"><p align="center"><a href="profile.php" class="nav-link" ><i class="fa fa-cog"></i><span><br>Profile<br>&nbsp;</span></a></p></div>
-              <div class="col-4 col-md"><p align="center"><a href="" class="nav-link" ><i class="fa fa-info-circle"></i><span><br>Laporan<br>&nbsp;</span></a></p></div>
+        <!-- Header -->
+        <div class="header">
+          <?php include 'data/header.php' ?>
         </div>
-      </div>
-    </div>
-  </nav>
-  <!-- Akhir dari Navbar Menu Mulai -->
+        <!-- Header -->
 
 
   <div class="py-3">
@@ -100,19 +68,12 @@
                   </div>
                 </div>
               </div>
-  <!--Foooter-->
-  <div class="bg-dark">
-    <div class="container">
-      <div class="row">
-        <!-- Footer Copyright-->
-        <div class="row">
-          <div class="col-md-12 mt-3">
-            <p style="color:white">© Copyright 2020 Supernova Studio - All rights reserved. <br> <a href="https://wa.me/6281294493204" style="color:white"> Whatsapp : 6281294493204</a></p>
-          </div>
-        </div>
+              
+      <!-- Footer -->
+      <div class="footer">
+       <?php include 'data/footer.php' ?>
       </div>
-    </div>
-  </div>
+      <!-- Footer-->
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>

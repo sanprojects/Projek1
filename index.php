@@ -60,9 +60,9 @@
       </div>
     </div>
   </div>
-  <div class="pt-5 pb-3 text-center" id="studio" style=" background-color: #602020">
+  <div class="pt-5 pb-3 text-center" id="studio" >
     <div class="container">
-    <div class="card" style="background-color:#b3b3b3">
+    <div class="card">
       <div class="row">
         <div class="col-md-12">
           <h1 class="mb-3">Galeri Studio Supernova</h1>

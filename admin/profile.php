@@ -5,50 +5,34 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-  <link rel="stylesheet" href=".css">
   <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
+  <!-- CSS -->
+
+            <!-- Tiny MCE -->
+            <script src='tinymce/tinymce.min.js'></script>
+            <script>
+              tinymce.init({
+            //Selector menggunakan name dari nama textarea
+              selector: '#about'
+            });
+              tinymce.init({
+            //Selector menggunakan name dari nama textarea
+              selector: '#ketentuan'
+            });
+            </script>
+            <!-- Tiny MCE -->
 </head>
 
 <body>
 
-  <!-- Navigasi Bar Mulai-->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container"> <a class="navbar-brand" href="index.php">
-        <b> SUPERNOVA</b>
-      </a>
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item"> <a class="navbar-collapse" style="color: white">Admin Panel</a> </li>
-        </ul>
-       <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar11">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbar11">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item"></li>
-        </ul>
-        <a class="btn btn-primary" href="index.php">Keluar</a>
-      </div>
-    </div>
-  </nav>
-  <!-- Navigasi Bar End-->
-
-  <!-- Navbar Menu Mulai -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="nav nav-tabs">
-              <div class="col-4 col-md"><p align="center"><a href="pesanan-baru.php" class="nav-link"  ><i class="fa fa-plus-square"></i><span><br>Pesanan<br>Baru</span></a></p></div>
-              <div class="col-4 col-md"><p align="center"><a href="data-pelanggan.php" class="nav-link" ><i class="fa fa-user-circle"></i><span><br>Data Pelanggan</span></a></p></div>
-              <div class="col-4 col-md"><p align="center"><a href="daftar-pemesanan.php" class="nav-link" ><i class="fa fa-book"></i><span><br>Daftar Pemesanan</span></a></p></div>
-              <div class="col-4 col-md"><p align="center"><a href="data-administrator.php" class="nav-link" ><i class="fa fa-user-circle"></i><span><br>Data<br>Admin</span></a></p></div>
-              <div class="col-4 col-md"><p align="center"><a href="profile.php" class="active nav-link" ><i class="fa fa-cog"></i><span><br>Profile<br>&nbsp;</span></a></p></div>
-              <div class="col-4 col-md"><p align="center"><a href="" class="nav-link" ><i class="fa fa-info-circle"></i><span><br>Laporan<br>&nbsp;</span></a></p></div>
+        <!-- Header -->
+        <div class="header">
+          <?php include 'data/header.php' ?>
         </div>
-      </div>
-    </div>
-  </nav>
-  <!-- Akhir dari Navbar Menu Mulai -->
+        <!-- Header -->
             
 
   <div class="py-3">
@@ -57,7 +41,7 @@
       <?php 
       if(isset($_GET['pesan'])){
         if ($_GET['pesan']=="edited") {
-        echo '<div id="pesan" class="alert alert-primary" role="alert" align="center">'."Sukses! Data Pelanggan Berhasil di Update!".'</div>';
+        echo '<div id="pesan" class="alert alert-primary" role="alert" align="center">'."Sukses! Profile Berhasil di Update!".'</div>';
         }
         }
       ?>
@@ -70,21 +54,25 @@
         <div class="col-md-4">
           <h3>Profile</h3>
           <hr>
-          <?php 
-            if(isset($_GET['pesan'])){
-              if ($_GET['pesan']=="success") {
-                echo '<div id="pesan" class="alert alert-primary" role="alert" align="center">'."Sukses! User Baru Telah DiTambahkan!".'</div>';
-              }
-            }
-           ?>
-          <form action="data/proses-tambah.php"  method="post">
-            <div class="form-group"><input type="hidden" name="id_user" value=""></input></div>
-            <div class="form-group"><input type="text" class="form-control" name="fname" placeholder="Nama" required></div>
-            <div class="form-group"><input type="number" class="form-control" name="nohp" placeholder="No Handphone" required></div>
-            <div class="form-group"><input type="text" class="form-control" name="alamat" placeholder="Alamat" required></div>
-            <div class="form-group"><input type="text" class="form-control" name="username" placeholder="Username" required></div>
-            <div class="form-group"><input type="password" class="form-control" id="form42" name="password" placeholder="Password" required></div>
-            <button type="submit" class="btn btn-primary">Simpan</button>
+
+          <!-- PHP Edit Profile -->
+            <?php
+              include '/data/koneksi.php';
+              $profile = mysqli_query($db,"select * from profile where id_profile='1'");
+              while($d = mysqli_fetch_array($profile)){
+            ?>
+            <!--End Of PHP Edit Profile -->
+
+          <form action="data/proses-profile.php"  method="post">
+            <b>
+            <div class="form-group"><label>Nama Studio : </label><input type="text" class="form-control" name="name" value="<?php echo $d['nama_studio']; ?>" required></div>
+            <div class="form-group"><label>No Handphone : </label><input type="text" class="form-control" name="nohp" value="<?php echo $d['handphone']; ?>" required></div>
+            <div class="form-group"><label>Alamat : </label><input type="text" class="form-control" name="alamat" value="<?php echo $d['alamat']; ?>" required></div>
+            <div class="form-group"><label>Kode Pos : </label><input type="text" class="form-control" name="kodepos" value="<?php echo $d['kodepos']; ?>" required></div></b>
+          <!-- Fetch While-->
+            <?php } ?>
+          <!-- End of Fetch While-->
+            <button type="submit" class="btn btn-primary" name="simpan1">Simpan</button>
           </form>
         </div>
         <div class="col-md-2"></div>
@@ -94,10 +82,29 @@
           <h3 class="mb-3">Harga</h3>
           <hr>
 
-          <form action="data/proses-tambah.php"  method="post">
-            <div class="form-group"><input type="text" class="form-control" name="fname" placeholder="Jam Siang" required></div>
-            <div class="form-group"><input type="number" class="form-control" name="nohp" placeholder="Jam Malam" required></div>
-            <button type="submit" class="btn btn-primary">Simpan</button>
+          <form action="data/proses-profile.php"  method="post">
+            <!-- PHP Edit Profile -->
+            <?php
+              $harga1 = mysqli_query($db,"select * from harga where id_harga='1'");
+              while($d = mysqli_fetch_array($harga1)){
+            ?>
+            <!--End Of PHP Edit Profile -->
+            <b><div class="form-group"><label>Jam Siang : </label><input type="text" class="form-control" name="harga1" value="<?php echo $d['harga']; ?>" required></div>
+              <!-- Fetch While-->
+                <?php } ?>
+              <!-- End of Fetch While-->
+
+              <!-- PHP Edit Profile -->
+              <?php
+                $harga2 = mysqli_query($db,"select * from harga where id_harga='2'");
+                while($d = mysqli_fetch_array($harga2)){
+              ?>
+              <!--End Of PHP Edit Profile -->
+            <div class="form-group"><label>Jam Malam : </label><input type="number" class="form-control" name="harga2" value="<?php echo $d['harga']; ?>" required></div></b>
+              <!-- Fetch While-->
+                <?php } ?>
+              <!-- End of Fetch While-->
+            <button type="submit" name="simpan2" class="btn btn-primary">Simpan</button>
           </form>
         </div>
       </div>
@@ -107,65 +114,59 @@
   <br><br><br><br><br>
   <div class="container">
     <div class="row">
-          <div class="col-lg-5">
+          <!-- PHP Edit Profile -->
+              <?php
+                $about1 = mysqli_query($db,"select * from about where id_about='1'");
+                while($d = mysqli_fetch_array($about1)){
+              ?>
+          <!--End Of PHP Edit Profile -->
+          
+        <div class="col-lg-5">
+          <form action="data/proses-profile.php" method="post">
             <h3>About</h3><hr>
-            <div id="editor"></div>
-          </div>
-
-          <div class="col-lg-1"></div>
-
-
-          <div class="col-lg-6">
-            <h3>Ketentuan Pemakaian</h3><hr>
-            <div id="textarea"></div>
-            <br><br><br>
-          </div>
-    </div>
-  </div>
-
-
-  <!--Foooter-->
-  <div class="bg-dark" style="">
-    <div class="container">
-      <div class="row">
-        <!-- Footer Copyright-->
-        <div class="row">
-          <div class="col-md-12 mt-3">
-            <p style="color:white">© Copyright 2020 Supernova Studio - All rights reserved. <br> <a href="https://wa.me/6281294493204" style="color:white"> Whatsapp : 6281294493204</a></p>
-          </div>
+              <div id="editor">
+                <textarea required="" class="form-control" id="about" name="about" value="" ><?php echo $d['isi']; ?></textarea>
+              </div>
+                <br><button type="submit" name="simpan3" class="btn btn-primary">Simpan</button>
+                <!-- Fetch While-->
+                <?php } ?>
+          <!-- End of Fetch While-->
+          </form>
         </div>
-      </div>
+                 <div class="col-lg-1"></div>
+        <div class="col-lg-6">
+            <h3>Ketentuan Pemakaian</h3><hr>
+                  <!-- PHP Edit Profile -->
+                      <?php
+                        $about2 = mysqli_query($db,"select * from about where id_about='2'");
+                        while($d = mysqli_fetch_array($about2)){
+                      ?>
+                  <!--End Of PHP Edit Profile -->
+
+          <form action="data/proses-profile.php" method="post">
+            <div id="textarea">
+              <div id="editor">
+                <textarea id="ketentuan" name="ketentuan"><?php echo $d['isi']; ?></textarea>
+              </div>
+              <br><button type="submit" name="simpan4" class="btn btn-primary">Simpan</button>
+            </div>
+                      <!-- Fetch While-->
+                <?php } ?>
+          <!-- End of Fetch While-->
+          </form>
+            <br><br><br>
+        </div>
     </div>
   </div>
 
-<!-- Script CK Editor Mulai-->
-<script src="ckeditor.js"></script>
-<script>
-  ClassicEditor
-    .create( document.querySelector( '#editor' ), {
-      // toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
-    } )
-    .then( editor => {
-      window.editor = editor;
-    } )
-    .catch( err => {
-      console.error( err.stack );
-    } );
-</script>
+      <!-- Footer -->
+      <div class="footer">
+       <?php include 'data/footer.php' ?>
+      </div>
+      <!-- Footer-->
 
-<script>
-  ClassicEditor
-    .create( document.querySelector( '#textarea' ), {
-      // toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
-    } )
-    .then( editor => {
-      window.editor = editor;
-    } )
-    .catch( err => {
-      console.error( err.stack );
-    } );
-</script>
-<!-- Script CK Editor Selesai-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 </body>
 
