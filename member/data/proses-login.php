@@ -12,7 +12,7 @@ $cek = mysqli_num_rows($query);
 if($cek > 0 ){
 	$_SESSION['username'] = $username;
 	$_SESSION['status'] = "login";
-	header("location:../dashboard.php");
+	header("location:../home.php?pesan=welcome");
 }else{
 	header("location:../login.php?pesan=failed");
 }

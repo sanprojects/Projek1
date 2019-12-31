@@ -38,18 +38,18 @@
             <label class="control-label"><b>Id User</b></label>
             <div class="form-group"><input type="text" class="form-control" name="id_user" value="<?php echo $d['id_user']; ?>" readonly></div>
             <label class="control-label"><b>Nama Depan</b></label>
-            <div class="form-group"><input type="text" class="form-control" name="nama_depan" value=" <?php echo $d['nama_depan']; ?> "></div>
+            <div class="form-group"><input type="text" class="form-control" name="nama_depan" value="<?php echo $d['nama_depan']; ?> "></div>
             <label class="control-label"><b>Nama Belakang</b></label>
-            <div class="form-group"><input type="text" class="form-control" name="nama_belakang" value=" <?php echo $d['nama_belakang']; ?> "></div>
+            <div class="form-group"><input type="text" class="form-control" name="nama_belakang" value="<?php echo $d['nama_belakang']; ?> "></div>
             <label class="control-label"><b>No Handphone</b></label>
-            <div class="form-group"><input type="tel" class="form-control" name="handphone" value=" <?php echo $d['handphone']; ?> "></div>
+            <div class="form-group"><input type="tel" class="form-control" name="handphone" value="<?php echo $d['handphone']; ?> "></div>
             <label class="control-label"><b>Alamat</b></label>
-            <div class="form-group"><input type="text" class="form-control" name="alamat" value=" <?php echo $d['alamat']; ?> "></div>
+            <div class="form-group"><input type="text" class="form-control" name="alamat" value="<?php echo $d['alamat']; ?> "></div>
             <label class="control-label"><b>Username</b></label>
-            <div class="form-group"><input type="text" class="form-control" name="username" value=" <?php echo $d['username']; ?> " readonly></div>
+            <div class="form-group"><input type="text" class="form-control" name="username" value="<?php echo $d['username']; ?> " readonly></div>
             <label class="control-label"><b>Password</b></label>
-            <div class="form-group"><input type="password" class="form-control" name="password" value=" <?php echo $d['password']; ?> " ></div>
-            <button type="submit" class="btn btn-primary">Edit Data</button>
+            <div class="form-group"><input type="password" class="form-control" name="password" value="<?php echo $d['password']; ?> " ></div>
+            <button type="submit" onclick="return konfirmasi()" class="btn btn-primary">Edit Data</button>
           </form>
           <!--END Of Form Edit Data Pelanggan -->
 
@@ -68,6 +68,15 @@
        <?php include 'data/footer.php' ?>
       </div>
       <!-- Footer-->
+
+      <script type="text/javascript" language="JavaScript">
+            function konfirmasi()
+            {
+                tanya = confirm("Apakah Anda yakin ingin menyimpan perubahaan ?");
+                if (tanya== true) return true;
+                else return false; 
+            }
+      </script>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>

@@ -84,7 +84,7 @@
         <td><?php echo $d['nama']; ?></td>
         <td><?php echo $d['handphone'];?></td>
         <td>
-          <a href="edit-data-admin.php?id_admin=<?php echo $d['id_admin']; ?>"class="btn btn-primary navbar-btn ml-md-2" >EDIT</a>
+          <a href="edit-data-admin.php?id_admin=<?php echo $d['id_admin']; ?>"class="btn btn-primary navbar-btn ml-md-2">EDIT</a>
           <a href="data/proses-hapus-admin.php?id_admin=<?php echo $d['id_admin']; ?>" onclick="return konfirmasi()" class="btn btn-primary navbar-btn ml-md-2">HAPUS</a>
         </td>
       </tr>
@@ -103,6 +103,7 @@
        <?php include 'data/footer.php' ?>
       </div>
       <!-- Footer-->
+
       <script type="text/javascript" language="JavaScript">
             function konfirmasi()
             {
@@ -111,7 +112,7 @@
                 else return false; 
             }
       </script>
-
+      
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
